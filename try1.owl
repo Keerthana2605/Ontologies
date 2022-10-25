@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://test.org/onto.owl"
+         xmlns="http://test.org/onto.owl#">
+
+<owl:Ontology rdf:about="http://test.org/onto.owl"/>
+
+<owl:ObjectProperty rdf:about="#has_for_adid">
+  <rdfs:domain rdf:resource="#Outlook"/>
+  <rdfs:range rdf:resource="#ADID"/>
+  <owl:inverseOf rdf:resource="#is_property1_of"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#is_property1_of">
+  <rdfs:range rdf:resource="#Outlook"/>
+  <rdfs:domain rdf:resource="#ADID"/>
+  <owl:inverseOf rdf:resource="#has_for_adid"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_for_gmail">
+  <rdfs:domain rdf:resource="#Outlook"/>
+  <rdfs:range rdf:resource="#Gmail"/>
+  <owl:inverseOf rdf:resource="#is_property2_of"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#is_property2_of">
+  <rdfs:range rdf:resource="#Outlook"/>
+  <rdfs:domain rdf:resource="#Gmail"/>
+  <owl:inverseOf rdf:resource="#has_for_gmail"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_for_zse">
+  <rdfs:domain rdf:resource="#Update"/>
+  <rdfs:range rdf:resource="#Zscalarenable"/>
+  <owl:inverseOf rdf:resource="#is_property3_of"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#is_property3_of">
+  <rdfs:range rdf:resource="#Update"/>
+  <rdfs:domain rdf:resource="#Zscalarenable"/>
+  <owl:inverseOf rdf:resource="#has_for_zse"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#Outlook">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ADID">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Gmail">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Lockout">
+  <rdfs:subClassOf rdf:resource="#Outlook"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Lockout_issue1">
+  <rdfs:subClassOf rdf:resource="#Lockout"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Update">
+  <rdfs:subClassOf rdf:resource="#Outlook"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Zscalarenable">
+  <rdfs:subClassOf rdf:resource="#Update"/>
+</owl:Class>
+
+
+</rdf:RDF>

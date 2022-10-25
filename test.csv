@@ -1,0 +1,3 @@
+id,parent,gram_positive,shape,grouping
+Enterococcus,Coccus,False,Round,InSmallChain
+BacillusAnthracis,Bacterium,True,Rod,InLongChain

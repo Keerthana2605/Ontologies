@@ -1,0 +1,4 @@
+id,ADID,Gmail,ZScalarEnable
+1,1234,"km1234@wipro".com,True
+2,2345,"nv2345@wipro.com",True
+3,12,"xyz12@wipro.com",False
